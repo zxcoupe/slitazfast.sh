@@ -1,16 +1,27 @@
-#Суть скрипта:
-#Ставим Slitaz Linux, жмакаем скрипт и все готово. Все что нужно- установлено.
-#А можно и не Slitaz - меняем установщик и то же самое.
-#Script version Alpha 0.01 (20230928-1)
-#Скрипт мэйд бай http://t.me/zxcoupe и http://t.me/atarist
-#Создан для ванклик-инсталл эмуляторов Hatari-1.4.0 и USP. Пока старые версии. Но пока так.
-#В Slitaz есть несколько пллезных хардвать команд- tazhw detect-pci и tazpkg detect-usb. Не забываем про нихю
+#Суть этого отладочного скрипта:
+#Тестируется он в VirtualBox, вживую и на Asus EEE701 и на R2H. Лень его разбивать под отдельное железо.
+#
+#Ставим Slitaz Linux, запускаем скрипт, ждем минут 10-20 и все готово. Все что нужно- установлено. И не надо пол дня мышкой кликать, вспоминать а как я ставил то, а как это.
+#Вообще можно и не Slitaz - меняем установщик и то же самое.
+#Script version Alpha 0.01 (20230928-2)
+#
+#Создан для эмуляторов Hatari-1.4.0 и USP. Пока старые версии. Но пока так. Цель- SDL 1.2 и раза в два бысрее чем SDL 2.0
+#В Slitaz есть несколько полезных команд- tazhw detect-pci и tazpkg detect-usb. Не забываем про них.
 #Не забываем про утилиту ARANDR (если в ПК есть ТВ выход, и надо лампово выводить на кинескоп то полезно)
-#В дальнейшем скрипт будет разбит н анесколько частей.
-#1. Установка вифи,mc при необходимости. Всякие нужные инструменты.
+#В дальнейшем скрипт будет разбит на несколько частей.
+#1. Установка WiFi, mc при необходимости. Всякие нужные инструменты.
 #2. Установка из исходников самих программ. Скрипт-название и т.п.
 
-#Поддержке вифи донгла выдернутого из приставки Nemo TV (Ralink RT3572, PID=148B:5273).
+#Сначала для профилактики смотрим что используем
+# Примерный вывод- Linux 222laptop 2.6.27-4-generic #1 SMP Wed Sep 24 01:30:51 UTC 2008 i686 GNU/Linux
+uname -a
+
+#Смотрим какой у нас компилятор (чтоб не было лишних вопросов)
+#Примерный вывод- gcc (Ubuntu 4.3.2-1ubuntu10) 4.3.2 Copyright (C) 2008
+gcc --version
+
+#Поддержке WiFi свистка из приставки Nemo TV (ради любопытства в Slitaz завелся, в свое время читал что под Windows драйверов не существует)
+#Ralink RT3572, PID=148B:5273
 modinfo rt2800usb
 #Поддержке вифи R2H/R2HV таблэтки
 wget http://people.slitaz.org/~mojo/stuff/zd1211rw-firmware-2.21.0.0-1.tazpkg
@@ -64,7 +75,7 @@ make
 make install
 cd ..
 
-#Для экранов БЕЗ 800x480 гемора
+#Для экранов БЕЗ 800x480 гемора лучше ~hatari-1.9.0
 #wget https://download.tuxfamily.org/hatari/1.9.0/hatari-1.9.0.tar.bz2 --no-check-certificate
 #tar -xvf hatari-1.9.0.tar.bz2
 #cd hatari-1.9.0
@@ -74,7 +85,7 @@ cd ..
 #make uninstall
 #cd ..
 
-#Для экранов 800x480 (Asus EEE701, Asus R2H/R2H и т.п.)
+#Для экранов 800x480 (Asus EEE701, Asus R2H/R2H и т.п.) лучше ~hatari-1.4.0
 tazpkg get-install hatari
 tazpkg remove hatari
 wget https://download.tuxfamily.org/hatari/1.4.0/hatari-1.4.0.tar.bz2 --no-check-certificate
@@ -120,3 +131,10 @@ cd ..
 #cmake .
 #make
 #./configure
+#
+#Старое от 2008 года. Установка Android на Asus EEE701 https://groups.google.com/g/android-porting/c/ZoYr21LayTY
+#Исходно https://web.archive.org/web/20120623022430/http://virtuallyshocking.com:80/2008/12/20/building-android-for-the-asus-eeepc-701/
+#
+#
+#Авторство, вопросы и т.д. http://t.me/zxcoupe 
+#Скрипт создавался для http://t.me/atarist
