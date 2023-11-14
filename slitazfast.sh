@@ -23,7 +23,7 @@ gcc --version
 #Поддержке WiFi свистка из приставки Nemo TV (ради любопытства в Slitaz завелся, в свое время читал что под Windows драйверов не существует)
 #Ralink RT3572, PID=148B:5273
 modinfo rt2800usb
-#Поддержке вифи R2H/R2HV таблэтки
+#Поддержка WiFi в Планшете Asus R2H/R2HV 
 wget http://people.slitaz.org/~mojo/stuff/zd1211rw-firmware-2.21.0.0-1.tazpkg
 #Если есть этот файл локально то соотв. положить его.
 tazpkg install zd1211rw-firmware-2.21.0.0-1.tazpkg
@@ -75,7 +75,7 @@ make
 make install
 cd ..
 
-#Для экранов БЕЗ 800x480 гемора лучше ~hatari-1.9.0
+#Для экранов "4:3" (800x600) лучше ~hatari-1.9.0 но у нас 800x480 и поэтому этот вариант не подходит (можно, но не комфортно)
 #wget https://download.tuxfamily.org/hatari/1.9.0/hatari-1.9.0.tar.bz2 --no-check-certificate
 #tar -xvf hatari-1.9.0.tar.bz2
 #cd hatari-1.9.0
@@ -85,7 +85,7 @@ cd ..
 #make uninstall
 #cd ..
 
-#Для экранов 800x480 (Asus EEE701, Asus R2H/R2H и т.п.) лучше ~hatari-1.4.0
+#Для экранов "16:9" (800x480, который у Asus EEE701, Asus R2H/R2HV и т.п.) лучше ~hatari-1.4.0
 tazpkg get-install hatari
 tazpkg remove hatari
 wget https://download.tuxfamily.org/hatari/1.4.0/hatari-1.4.0.tar.bz2 --no-check-certificate
