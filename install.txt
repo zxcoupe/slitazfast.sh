@@ -1,6 +1,6 @@
 wget https://github.com/zxcoupe/slitazfast.sh/archive/refs/heads/main.zip
-mkdir slitazfast
-unzip main.zip /slitazfast
+unzip main.zip
+cd slitazfast.sh-main
 chmod +X slitazfast.sh
 sudo slitazfast.sh
 
