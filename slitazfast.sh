@@ -92,6 +92,7 @@ wget https://download.tuxfamily.org/hatari/1.4.0/hatari-1.4.0.tar.bz2 --no-check
 tar -xvf hatari-1.4.0.tar.bz2
 cd hatari-1.4.0
 make clean
+#Обратить внимание! HATARI 1.4.0 компилируется именно cmake а не make!!!
 cmake .
 make install
 cd ..
