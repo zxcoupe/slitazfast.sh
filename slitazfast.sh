@@ -139,3 +139,5 @@ cd ..
 #
 #Авторство, вопросы и т.д. http://t.me/zxcoupe 
 #Скрипт создавался для http://t.me/atarist
+# Примеры компиляции Fast Tracker 2
+# https://github.com/8bitbubsy/pt2-clone/blob/master/HOW-TO-COMPILE.txt
