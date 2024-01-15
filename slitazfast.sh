@@ -156,3 +156,4 @@ cd ..
 #setarch x86
 #"You probably have to switch compiler (don't have Haiku running atm) for 32bit, in Terminal type: setarch x86 (this will switch compiler from gcc2.* to gcc11.*), then try again. :) (exit will get you back to gcc2 (you can also check with gcc -v in Terminal which one is being used))"
 #https://github.com/Mr-Precise/rtl-sdr/issues/2
+#LDFLAGS="-lnetwork" ./configure
