@@ -141,3 +141,18 @@ cd ..
 #Скрипт создавался для http://t.me/atarist
 # Примеры компиляции Fast Tracker 2
 # https://github.com/8bitbubsy/pt2-clone/blob/master/HOW-TO-COMPILE.txt
+#Очень нужная и полезная информация
+#ну вот что гайке то не нравится... я задолбался
+#[  5%] Building C object src/cpu/CMakeFiles/build68k.dir/build68k.c.o
+#cc1: Invalid option `-Wno-unused-variable'
+#cc1: Invalid option `-Wno-unused-label'
+#src/cpu/CMakeFiles/build68k.dir/build.make:74: recipe for target 'src/cpu/CMakeFiles/build68k.dir/build68k.c.o' failed
+#make[2]: *** [src/cpu/CMakeFiles/build68k.dir/build68k.c.o] Error 1
+#CMakeFiles/Makefile2:455: recipe for target 'src/cpu/CMakeFiles/build68k.dir/all' failed
+#make[1]: *** [src/cpu/CMakeFiles/build68k.dir/all] Error 2
+#Makefile:135: recipe for target 'all' failed
+#make: *** [all] Error 2
+#И вроде как решение-
+#setarch x86
+#"You probably have to switch compiler (don't have Haiku running atm) for 32bit, in Terminal type: setarch x86 (this will switch compiler from gcc2.* to gcc11.*), then try again. :) (exit will get you back to gcc2 (you can also check with gcc -v in Terminal which one is being used))"
+#https://github.com/Mr-Precise/rtl-sdr/issues/2
