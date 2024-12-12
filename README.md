@@ -1,3 +1,6 @@
+https://youtu.be/bFCCUg2WIU0
+
+
 # slitazfast.sh
 Slitaz Linux easy compile Hatari and install it with SDL 1.2 (Asus EEE701 / R2H / etc) for pure (<=650MHz~900MHz CPU's). By the way, it tuned and compiled any soft (In my case is Hatari - Atari ST emulator).
 
