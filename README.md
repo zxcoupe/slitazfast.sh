@@ -30,3 +30,7 @@ Ru:
 
 URL:
 https://pikabu.ru/story/asus_eeepc_2g_surf__privodim_v_chuvstva_legendarnyiy_netbuk_3918278
+
+For Developments:
+https://portmaster.games/porting.html
+
