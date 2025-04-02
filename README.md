@@ -34,5 +34,7 @@ https://pikabu.ru/story/asus_eeepc_2g_surf__privodim_v_chuvstva_legendarnyiy_net
 For Developments:
 https://portmaster.games/porting.html
 https://whycan.com/t_6647_6.html
+https://github.com/eduardofilo/RG350_adam_image/wiki/En:-2.-Install-&-Upgrade#fresh-installation
+
 
 
